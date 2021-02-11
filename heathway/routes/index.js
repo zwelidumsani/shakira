@@ -19,12 +19,12 @@ router.get('/services', function(req, res, next) {
 
 
 router.get('/about', function(req, res, next) {
-  res.render('about.handlebars', {breadcrumb: "About"});
+  res.render('about.handlebars', {breadcrumb: "About Us"});
 });
 
 
 router.get('/team', function(req, res, next) {
-  res.render('team.handlebars', {breadcrumb: "About"});
+  res.render('team.handlebars', {breadcrumb: "The Team"});
 });
 
 
@@ -34,6 +34,7 @@ router.get('/testimonials', function(req, res, next) {
 
 
 router.get('/contact', function(req, res, next) {
+	
   res.render('contact.handlebars', {breadcrumb: "Contact"});
 });
 

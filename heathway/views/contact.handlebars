@@ -3,7 +3,6 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
           <h2>Contact</h2>
           <ol>
@@ -11,7 +10,6 @@
             <li>{{breadcrumb}}</li>
           </ol>
         </div>
-
       </div>
     </section><!-- End Breadcrumbs -->
 
@@ -55,7 +53,21 @@
 
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+		  
+		         {{#if emailSuccess}} 
+					 <div class = "alert alert-success" alert-dismissable style = "border-radius:4px;>
+					     <p class= "pull-right"><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"><i class = "lnr lnr-cross-circle"></i></button>
+					     <i class = "lnr lnr-checkmark-circle"></i>  Email was successfully sent.</p>
+					 </div>	
+			     {{/if}}
+			   
+				 {{#if emailError}} 
+				     <div class = "alert alert-danger" alert-dismissable style = "border-radius:4px;>
+						 <p class= "pull-right"><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"><i class = "lnr lnr-cross-circle"></i></button>
+						 <i class = "lnr lnr-cross-circle"></i>  Could not send email.</p>
+					 </div>	
+				 {{/if}}
+            <form action="/email" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -65,10 +77,6 @@
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
@@ -82,9 +90,8 @@
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
-
         </div>
-
+		
       </div>
     </section><!-- End Contact Section -->
 
