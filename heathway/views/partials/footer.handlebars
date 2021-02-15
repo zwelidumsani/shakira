@@ -14,6 +14,7 @@
               Eswatini <br><br>
               <strong>Phone:</strong> +268 7806 1010<br>
 			  <strong>Tel:</strong> +268 2505 3895<br>
+			  <strong>Electrical Company Brunches: <br></strong> Manzini & Siphofaneni<br>
               <strong>Email:</strong> heathwayinvestments@gmail.com<br>
             </p>
           </div>
@@ -24,7 +25,9 @@
               <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="/services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/faq">FAQ</a></li>
+			  <li><i class="bx bx-chevron-right"></i> <a href="/portfolio">Portfolio</a></li>
+			  <li><i class="bx bx-chevron-right"></i> <a href="">Careers <span style= "background:red; border-radius: 5px; padding: 3px"> No vacancies</span></a></li>
+			  <li><i class="bx bx-chevron-right"></i> <a href="/faq">FAQ</a></li>
             </ul>
           </div>
 
@@ -41,7 +44,20 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>Get in touch and stay updated about new stock and services offered by our organization.</p>
-            <form action="" method="post">
+			    {{#if subscriptionSuccess}} 
+					 <div class = "alert alert-success" alert-dismissable style = "border-radius:4px;>
+					     <p class= "pull-right"><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"></button>
+					     <i class = "bx bx-message-check"></i>  Email Sent.</p>
+					 </div>	
+			     {{/if}}
+			   
+				 {{#if subscriptionError}} 
+				     <div class = "alert alert-danger" alert-dismissable style = "border-radius:4px;>
+						 <p class= "pull-right"><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"></button>
+						 <i class = "bx bxs-message-error"></i>  Could Not Subscribe.</p>
+					 </div>	
+				 {{/if}}
+            <form action="/subscribe" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
@@ -51,24 +67,21 @@
     </div>
 
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>HeathWay Investment</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>HeathWay Investments</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="http://eswatiniherbalnutrition.shop/"  style = "color:red">WebTech</a>
+          Designed by <a href="http://eswatiniherbalnutrition.shop/"  style = "color:red">WebTech.Inc</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>

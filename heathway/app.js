@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser')
+var session  = require('express-session')
 var flash = require('connect-flash')
 var passport = require('passport')
 var nodemailer = require('nodemailer')
@@ -27,6 +28,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.text());
+app.use(cookieParser());
+app.use(session({secret: 'mySuperSecret',
+ resave: false,
+ saveUninitialized: false,
+ cookie: {maxAge: 14*24*60*60*1000}
+ }));
 app.use(flash());
 app.use(passport.initialize());
 

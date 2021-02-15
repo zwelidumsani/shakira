@@ -64,6 +64,9 @@ h1, h2, h3, h4, h5, h6 {
   background: #40BBFD;
   transition: 0.3s ease-in-out;
 }
+.map-section {
+     padding: 0px;
+}
 
 /*--------------------------------------------------------------
 # Disable AOS delay on mobile
@@ -237,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #1bbd36;
+  color: #40BBFD;
 }
 
 .mobile-nav {
@@ -272,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #1bbd36;
+  color: #40BBFD;
   text-decoration: none;
 }
 
@@ -393,11 +396,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
   color: #fff;
   border-top: 5px solid #40BBFD;
+  border-radius: 10px;
 }
 
 
 .top-border{
   border-top: 5px solid #40BBFD;
+  border-bottom: 5px solid #40BBFD;
   border-radius:6px;
 }
 
@@ -572,7 +577,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #40BBFD;
+  background: linear-gradient(to top, #40bbfd 0%, #ffffff 100%);
   min-height: 40px;
   margin-top: 72px;
   margin-top: 70px;
@@ -867,9 +872,8 @@ section {
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
-.clients .clients-wrap {
-  border-top: 1px solid #ececec;
-  border-left: 1px solid #ececec;
+.clients {
+    background-image: url("/assets/img/b1.png");
 }
 
 .clients .client-logo {
@@ -879,6 +883,8 @@ section {
   align-items: center;
   border-right: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+  border-left: 1px solid #ececec;
+  border-top: 1px solid #ececec;
   overflow: hidden;
   background: #fff;
   height: 100px;
@@ -942,7 +948,7 @@ section {
   overflow: hidden;
   text-align: center;
   border-radius: 5px;
-  background: #fff;
+  background: linear-gradient(to right, #b33232 0%, #3399ff 100%);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1079,115 +1085,6 @@ section {
   color: #1bbd36;
 }
 
-/*--------------------------------------------------------------
-# Pricing
---------------------------------------------------------------*/
-.pricing .box {
-  padding: 20px;
-  background: #fff;
-  text-align: center;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.pricing h3 {
-  font-weight: 400;
-  margin: -20px -20px 20px -20px;
-  padding: 20px 15px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #847872;
-  background: #f8f8f8;
-}
-
-.pricing h4 {
-  font-size: 36px;
-  color: #1bbd36;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 20px;
-}
-
-.pricing h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing h4 span {
-  color: #bababa;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing ul {
-  padding: 0;
-  list-style: none;
-  color: #4d4643;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing ul li {
-  padding-bottom: 16px;
-}
-
-.pricing ul i {
-  color: #1bbd36;
-  font-size: 18px;
-  padding-right: 4px;
-}
-
-.pricing ul .na {
-  color: #ccc;
-  text-decoration: line-through;
-}
-
-.pricing .btn-wrap {
-  margin: 20px -20px -20px -20px;
-  padding: 20px 15px;
-  background: #f8f8f8;
-  text-align: center;
-}
-
-.pricing .btn-buy {
-  background: #1bbd36;
-  display: inline-block;
-  padding: 8px 35px 10px 35px;
-  border-radius: 4px;
-  color: #fff;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.pricing .btn-buy:hover {
-  background: #2ae149;
-}
-
-.pricing .featured h3 {
-  color: #fff;
-  background: #1bbd36;
-}
-
-.pricing .advanced {
-  width: 200px;
-  position: absolute;
-  top: 18px;
-  right: -68px;
-  transform: rotate(45deg);
-  z-index: 1;
-  font-size: 14px;
-  padding: 1px 0 3px 0;
-  background: #1bbd36;
-  color: #fff;
-}
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
@@ -1223,6 +1120,7 @@ section {
   padding: 0 30px;
   outline: none;
   cursor: pointer;
+  color: #40BBFD;
 }
 
 .faq .faq-list .icon-help {
@@ -1231,6 +1129,7 @@ section {
   right: 0;
   left: 20px;
   color: lightgray;
+  
 }
 
 .faq .faq-list .icon-show, .faq .faq-list .icon-close {
@@ -1238,20 +1137,24 @@ section {
   position: absolute;
   right: 0;
   top: 0;
+  
 }
 
 .faq .faq-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
+  
 }
 
 .faq .faq-list .icon-show {
   display: none;
+  
 }
 
 .faq .faq-list a.collapsed {
   color: #343a40;
   transition: 0.3s;
+  
 }
 
 .faq .faq-list a.collapsed:hover {
@@ -1260,10 +1163,12 @@ section {
 
 .faq .faq-list a.collapsed .icon-show {
   display: inline-block;
+  color: #40BBFD;
 }
 
 .faq .faq-list a.collapsed .icon-close {
   display: none;
+  
 }
 
 @media (max-width: 1200px) {
@@ -1334,19 +1239,21 @@ section {
 .contact .info-wrap {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  background: linear-gradient(to right, #b33232 0%, #3399ff 100%);
+  border-radius: 5px;
 }
 
 .contact .info {
-  background: #fff;
+  background:;
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #40BBFD;
+  color: yellow;
   float: left;
   width: 44px;
   height: 44px;
-  border: 1px solid #40BBFD;
+  border: 1px solid yellow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1370,22 +1277,27 @@ section {
 }
 
 .contact .info:hover i {
-  background: #40BBFD;
-  color: #fff;
+  background: yellow;
+  color: #028DF4;
 }
 
-.contact .php-email-form {
+.info{
+	color: white;
+}
+
+.contact .email-form {
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   padding: 30px;
-  background: #fff;
+  background: linear-gradient(to right, #b33232 0%, #3399ff 100%);
+  border-radius: 5px;
 }
 
-.contact .php-email-form .form-group {
+.contact .email-form .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .validate {
+.contact .email-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1393,7 +1305,7 @@ section {
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+.contact .email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1402,11 +1314,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .email-form .error-message br + br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1415,14 +1327,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1435,36 +1347,36 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .email-form input, .contact .email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
 }
 
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+.contact .email-form input:focus, .contact .email-form textarea:focus {
   border-color: #40BBFD;
 }
 
-.contact .php-email-form input {
+.contact .email-form input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact .email-form textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
-  background: #40BBFD;
-  border: 0;
+.contact .email-form button[type="submit"] {
+  border: 2px solid #40BBFD;
   padding: 10px 24px;
-  color: #fff;
+  color: ;
   transition: 0.4s;
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
-  background: yellow;
+.contact .email-form button[type="submit"]:hover {
+  background: #40BBFD;
+  color: white;
 }
 
 @-webkit-keyframes animate-loading {

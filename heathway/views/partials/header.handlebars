@@ -3,35 +3,32 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="/"><span>HEATH</span><span style = "color:yellow">WAY</span></a></h1>
+      <!--<h1 class="logo me-auto"><a href="/"><span>HEATH</span><span style = "color:yellow">WAY</span></a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
-       <!--<a href="/" class="logo me-auto"><img src="assets/img/1.jpg" alt="" class="img-fluid"></a>-->
+      <a href="/" class="logo me-auto"><img src="assets/img/tt.png" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">Home</a></li>
+          <li class={{home}}><a href="/">Home</a></li>
 
-          <li class="drop-down"><a href="">About</a>
+          <li class="drop-down {{about}}" ><a href="">About</a>
             <ul>
               <li><a href="/about">About Us</a></li>
               <li><a href="/team">Team</a></li>
               <li><a href="/testimonials">Testimonials</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
+              <li class="drop-down"><a href="#">Electrical Shops</a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="/#electricity">Manzini Branch</a></li>
+                  <li><a href="#">Siphofaneni Branch</a></li>
                 </ul>
               </li>
             </ul>
           </li>
 
-          <li><a href="/services">Services</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/faq">FAQ</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li class = "{{services}}"><a href="/services">Services</a></li>
+          <li class = "{{portfolio}}"><a href="/portfolio">Portfolio</a></li>
+          <li class = "{{faq}}"><a href="/faq">FAQ</a></li>
+          <li class = "{{contact}}"><a href="/contact">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -39,7 +36,7 @@
       <div class="header-social-links">
         <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="instagram"><i class="icofont-linkedin"></i></a>
       </div>
 
     </div>
