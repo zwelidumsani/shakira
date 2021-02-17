@@ -3,7 +3,7 @@
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Contact</h2>
+          <h2>{{breadcrumb}}</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>{{breadcrumb}}</li>
@@ -50,8 +50,12 @@
 		
 
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
+		{{#if getQuote}}
+			<div class="section-title">
+			  <h2>Get A Quote</strong></h2>
+			</div>
+		{{/if}}
           <div class="col-lg-10">
-		  
 		        {{#if emailSuccess}} 
 					 <div class = "alert alert-success" alert-dismissable style = "border-radius:4px;>
 					     <p class= "pull-right"><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"></button>
@@ -85,7 +89,6 @@
             </form>
           </div>
         </div>
-		
       </div>
     </section><!-- End Contact Section -->
 

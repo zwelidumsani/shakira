@@ -12,12 +12,12 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/portfolio', function(req, res, next) {
-  res.render('portfolio.handlebars', {portfolio: "active"});
+  res.render('portfolio.handlebars', {portfolio: "active", portfolio: "Portfolio"});
 });
 
 
 router.get('/services', function(req, res, next) {
-  res.render('services.handlebars',{services: "active"});
+  res.render('services.handlebars',{services: "active", Services: "Services"});
 });
 
 
@@ -40,6 +40,12 @@ router.get('/contact', function(req, res, next) {
      var emailSuccess = req.flash("email_success")[0];
 	 var emailError = req.flash("email_error")[0];
      res.render('contact.handlebars', {breadcrumb: "Contact", emailError: emailError, emailSuccess: emailSuccess, contact: "active"});
+});
+
+
+router.get('/quoter', function(req, res, next) {
+	 var getQuot = 1
+     res.render('contact.handlebars', {breadcrumb: "Get A Quote", getQuote: "Get A Quote"});
 });
 
 
