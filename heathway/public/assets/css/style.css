@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #B33232;
+   background: linear-gradient(to right, #b33232 52%, #ffcccc 100%);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -644,6 +644,7 @@ section {
   color: #CCD0D4;  
 }
 
+
 .services .icon-box .icon {
   margin: 0 auto;
   width: 100px;
@@ -1060,37 +1061,44 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
-.features .icon-box {
+.features .box {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: #fff;
+  color: white;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: ease-in-out 0.3s;
+  border-radius: 5px;
+  background: #40BBFD;
 }
 
-.features .icon-box i {
+.features .box:hover {
+	color:yellow;
+}
+
+
+.features .box i {
   font-size: 32px;
   padding-right: 10px;
   line-height: 1;
 }
 
-.features .icon-box h3 {
+.features .box h3 a {
   font-weight: 700;
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height:1;
   font-size: 16px;
+  color:black;
 }
 
-.features .icon-box h3 a {
-  color: #111;
+.features box h3 a {
+  color: red;
   transition: ease-in-out 0.3s;
 }
 
-.features .icon-box h3 a:hover {
-  color: #1bbd36;
-}
+
+
 
 
 /*--------------------------------------------------------------

@@ -45,7 +45,7 @@ router.get('/contact', function(req, res, next) {
 
 router.get('/quoter', function(req, res, next) {
 	 var getQuot = 1
-     res.render('contact.handlebars', {breadcrumb: "Get A Quote", getQuote: "Get A Quote"});
+     res.render('contact.handlebars', {breadcrumb: "Request Quote", getQuote: "Request Quote"});
 });
 
 
