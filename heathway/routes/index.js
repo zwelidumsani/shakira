@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/portfolio', function(req, res, next) {
-  res.render('portfolio.handlebars', {portfolio: "active", portfolio: "Portfolio"});
+  res.render('portfolio.handlebars', {portfolioActive: "active", portfolio: "Portfolio"});
 });
 
 
